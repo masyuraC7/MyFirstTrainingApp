@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.mc7.firstapptry.ui.homemenu.fragmentactivity.DashboardFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboardFragment_to_categoryFragment"
+            app:destination="@id/categoryFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_profileActivity"
+            app:destination="@id/profileActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.mc7.firstapptry.ui.homemenu.fragmentactivity.CategoryFragment"
+        android:label="fragment_category"
+        tools:layout="@layout/fragment_category">
+        <action
+            android:id="@+id/action_categoryFragment_to_detailCategoryFragment"
+            app:destination="@id/detailCategoryFragment" />
+    </fragment>
+
+    <activity
+        android:id="@+id/profileActivity"
+        android:name="com.mc7.firstapptry.ui.homemenu.fragmentactivity.ProfileActivity"
+        android:label="activity_profile"
+        tools:layout="@layout/activity_profile" />
+
+    <fragment
+        android:id="@+id/detailCategoryFragment"
+        android:name="com.mc7.firstapptry.ui.homemenu.fragmentactivity.DetailCategoryFragment"
+        android:label="fragment_detail_category"
+        tools:layout="@layout/fragment_detail_category">
+        <action
+            android:id="@+id/action_detailCategoryFragment_to_profileActivity"
+            app:destination="@id/profileActivity" />
+        <!--suppress NavigationFile -->
+        <argument
+            android:name="name"
+            android:defaultValue="default name"
+            app:argType="string" />
+        <!--suppress NavigationFile -->
+        <argument
+            android:name="stock"
+            android:defaultValue="0L"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_detailCategoryFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
+</navigation>

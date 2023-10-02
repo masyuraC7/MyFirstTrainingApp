@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.homemenu.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:paddingBottom="50dp"
+            android:columnCount="2">
+
+            <Button
+                android:layout_marginEnd="8dp"
+                android:id="@+id/btn_aritmatika"
+                style="@style/ButtonMainPage"
+                android:text="@string/txt_aritmatika"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <Button
+                android:id="@+id/btn_next"
+                style="@style/ButtonMainPage"
+                android:text="@string/move_activity"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <Button
+                android:layout_marginEnd="8dp"
+                android:id="@+id/btn_nextWithData"
+                style="@style/ButtonMainPage"
+                android:text="@string/nextWithData"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_aritmatika" />
+
+            <Button
+                android:id="@+id/btn_nextWithObject"
+                style="@style/ButtonMainPage"
+                android:text="@string/nextWithObject"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_next" />
+
+            <Button
+                android:layout_marginEnd="8dp"
+                android:id="@+id/btn_dialNumber"
+                style="@style/ButtonMainPage"
+                android:text="@string/nextDialNumber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_nextWithData" />
+
+            <Button
+                android:id="@+id/btn_moveForResult"
+                style="@style/ButtonMainPage"
+                android:text="@string/moveForResult"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_nextWithObject" />
+
+            <Button
+                android:layout_marginEnd="8dp"
+                android:id="@+id/btn_move_to_view_view_group"
+                style="@style/ButtonMainPage"
+                android:text="@string/viewViewGroup"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_dialNumber" />
+
+            <Button
+                android:id="@+id/btn_moveToRecyclerView"
+                style="@style/ButtonMainPage"
+                android:text="@string/recyclerView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_moveForResult" />
+
+            <Button
+                android:layout_marginEnd="8dp"
+                android:id="@+id/btn_fragment"
+                style="@style/ButtonMainPage"
+                android:text="@string/fragment"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_move_to_view_view_group" />
+
+            <Button
+                android:id="@+id/btn_topAppBar"
+                style="@style/ButtonMainPage"
+                android:text="@string/topAppBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_moveToRecyclerView" />
+
+            <Button
+                android:layout_marginEnd="8dp"
+                android:id="@+id/btn_bottom_navigation"
+                style="@style/ButtonMainPage"
+                android:text="@string/bottom_navigation"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_fragment" />
+
+            <Button
+                android:id="@+id/btn_tab_layout"
+                style="@style/ButtonMainPage"
+                android:text="@string/tab_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_topAppBar" />
+
+        </GridLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

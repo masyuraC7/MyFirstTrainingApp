@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/showArticles"
+        android:icon="@drawable/baseline_announcement_24"
+        android:title="@string/show_articles"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/searchViewProfile"
+        android:title="@string/search_articles"
+        app:showAsAction="never" />
+
+</menu>
