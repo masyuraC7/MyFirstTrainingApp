@@ -3,14 +3,13 @@ package com.mc7.firstapptry.ui.homemenu
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.mc7.firstapptry.data.local.entity.Hero
-import com.mc7.firstapptry.ui.homemenu.adapter.ListHeroAdapter
 import com.mc7.firstapptry.R
+import com.mc7.firstapptry.data.local.entity.Hero
 import com.mc7.firstapptry.databinding.ActivityRecyclerViewBinding
+import com.mc7.firstapptry.ui.homemenu.adapter.ListHeroAdapter
 
 class RecyclerViewActivity : AppCompatActivity() {
     private lateinit var binding: ActivityRecyclerViewBinding
@@ -44,16 +43,17 @@ class RecyclerViewActivity : AppCompatActivity() {
         val listHeroAdapter = ListHeroAdapter(list)
         binding.rvHeroes.adapter = listHeroAdapter
 
-        listHeroAdapter.setOnItemClickCallback(object : ListHeroAdapter.OnItemClickCallback {
-            override fun onItemClicked(data: Hero) {
-                showSelectedHero(data)
-            }
-        })
+//        callback option
+//        listHeroAdapter.setOnItemClickCallback(object : ListHeroAdapter.OnItemClickCallback {
+//            override fun onItemClicked(data: Hero) {
+//                showSelectedHero(data)
+//            }
+//        })
     }
 
-    private fun showSelectedHero(hero: Hero) {
-        Toast.makeText(this, "Kamu memilih " + hero.name, Toast.LENGTH_SHORT).show()
-    }
+//    private fun showSelectedHero(hero: Hero) {
+//        Toast.makeText(this, "Kamu memilih " + hero.name, Toast.LENGTH_SHORT).show()
+//    }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.recycler_view_menu, menu)

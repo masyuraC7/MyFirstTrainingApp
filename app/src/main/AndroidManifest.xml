@@ -15,6 +15,9 @@
         android:theme="@style/Theme.FirstAppTry"
         tools:targetApi="31">
         <activity
+            android:name=".ui.DetailHeroActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.homemenu.BottomNavigationActivity"
             android:exported="false" />
         <activity
